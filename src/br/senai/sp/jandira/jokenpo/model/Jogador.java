@@ -80,7 +80,22 @@ public class Jogador {
         System.out.println("-------------------------------");
         System.out.println(resultado);
 
-
+        jogarNovamente();
     }
-
+    public void jogarNovamente(){
+        System.out.println();
+        System.out.print("Deseja jogar novamente (S/N)? ");
+        decisao = leitor.nextLine();
+        resultarEscolha();
+    }
+    public void resultarEscolha(){
+        if (decisao.equalsIgnoreCase("S")){
+            System.out.println("Ok! Vamos lá");
+            escolherJogada();
+        }else if (decisao.equalsIgnoreCase("N")){
+            System.out.println("Como quiser, até a próxima.");
+        }else {
+            System.out.println("Desculpe, escolha apenas uma das opções.");
+        }
+    }
 }
