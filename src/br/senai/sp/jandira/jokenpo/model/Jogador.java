@@ -56,5 +56,31 @@ public class Jogador {
             jogadaComputador = "Tesoura";
         }
 
+        formarResultado();
+    }
+    public void formarResultado(){
+        if (jogada.equals(jogadaComputador)){
+            resultado = "Deu empate! Tente novamente.";
+        }else if (jogada.equals("Pedra") && jogadaComputador.equals("Tesoura")){
+            resultado = "Parabéns! Você venceu.";
+        }else if (jogada.equals("Tesoura") && jogadaComputador.equals("Papel")){
+            resultado = "Parabéns! Você venceu.";
+        }else if (jogada.equals("Papel") && jogadaComputador.equals("Pedra")){
+            resultado = "Parabéns! Você venceu.";
+        }else {
+            resultado = "Lol! Você perdeu, jogue novamente.";
+        }
+
+        exibirResultados();
+    }
+    public void exibirResultados(){
+        System.out.println("-------------------------------");
+        System.out.println("Você escolheu: " + jogada);
+        System.out.println("O computador escolheu: " + jogadaComputador);
+        System.out.println("-------------------------------");
+        System.out.println(resultado);
+
 
     }
+
+}
